@@ -7,7 +7,7 @@ titulo.textContent = "Hotel Orion - Hortolândia"
 //************************************************************** */
 var contHospedeTabela = document.querySelectorAll(".reservas")
 console.log(contHospedeTabela);
-for(var i = 0; i < contHospedeTabela.length; i++){
+for(var i = 0; i < contHospedeTabela.length; i++){//VALOR DE I CONTADO X VEZES O LENGTH DE CONSTHOSPEDETABELA
     var hospedeTabela = contHospedeTabela[i];
 
     var hospedeNome = hospedeTabela.querySelector(".info-nome");
