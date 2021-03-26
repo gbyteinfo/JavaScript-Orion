@@ -5,7 +5,7 @@ titulo.textContent = "Hotel Orion - Hortolândia"
 //******INICIO SELEÇÃO DE VALORES COM QUERYSELECTOR*************/
 //************************************************************** */
 //************************************************************** */
-var hospedeTabela = document.querySelector("#id-reservas")// BUSCANDO A TAG ESPECICA PELA CLASSE HTML
+var hospedeTabela = document.querySelector("#id-reservas")// BUSCANDO A TAG ESPECIFICA A PARTIR DO ID HTML DESCRITO
 console.log(hospedeTabela);
 
 var hospedeNome = hospedeTabela.querySelector(".info-nome");
@@ -46,9 +46,27 @@ console.log(hospedeVTotal);
 
 
 //*****INICIO CALCULO VALOR DIARIA / VALOR TOTAL ***********/
-var contaBooking = (qpessoasHospede * 100) * qquartosHospede * qnoitesHospede;
+var tipoPG = hospedeTabela.querySelector(".info-pagamento");
+var recuperadoTipoPG = tipoPG.textContent;
+if(recuperadoTipoPG == 1 || recuperadoTipoPG == 2 || recuperadoTipoPG == 3 ){
+    if(recuperadoTipoPG == 1){
+        var pgSelecionado = 10.00;
+        var descricaoTipoPG = "Pagamento Dédito";
+    }else if(recuperadoTipoPG == 2){
+        var pgSelecionado = 15.00;
+        var descricaoTipoPG = "Pagamento Crédito";
+    }else{
+        var pgSelecionado = 20.00;
+        var descricaoTipoPG = "Pagamento Dinheiro";
+    }
+}else{
+    var pgSelecionado = 0;
+}
+console.log("pgSelecionado " + pgSelecionado + " - Tipo: " + descricaoTipoPG);
+console.log("\n\n TIPO DE PAGAMENTO ===> " + recuperadoTipoPG + "\n\n");
+var contaBooking = (qpessoasHospede * 100) * qquartosHospede * qnoitesHospede + pgSelecionado;
 console.log("Valor da Reserva Total => " + contaBooking + "\n");
-var contaBookingParcial = (qpessoasHospede * 100) *qquartosHospede;
+var contaBookingParcial = (qpessoasHospede * 100) * qquartosHospede;
 console.log("Valor da Diaria => " + contaBookingParcial + "\n");
 //*****FINAL CALCULO VALOR DIARIA / VALOR TOTAL ***********/
 
@@ -88,6 +106,6 @@ console.log("TOTAL HTML R$ " + resultadoVTotal);
 console.log("TOTAL CODE R$ " + contaBooking + ",00");
 console.log("DIARIA HTML R$ " + resultadoVdiaria);
 console.log("DIARIA CODE R$ " + contaBookingParcial + ",00");
-alert("HOTEL ORION\n\nDiaria ................. R$ " + contaBookingParcial + ",00 \nTotal Reserva ...R$ " + contaBooking + ",00 ");
+alert("HOTEL ORION\n\nDiaria ................. R$ " + contaBookingParcial + ",00 \nTotal Reserva ...R$ " + contaBooking + ",00 \n" + descricaoTipoPG);
 
 
