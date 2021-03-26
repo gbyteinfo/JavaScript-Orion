@@ -1,3 +1,4 @@
+alert("Buscando Hospede... Clique em Ok");
 var titulo = document.querySelector(".titulo-barra-superior");// BUSCANDO A TAG ESPECICA PELA CLASSE HTML			
 titulo.textContent = "Hotel Orion - Hortolândia"
 
@@ -52,14 +53,33 @@ console.log("Valor da Diaria => " + contaBookingParcial + "\n");
 //*****FINAL CALCULO VALOR DIARIA / VALOR TOTAL ***********/
 
 //*****INICIO ALTERANDO VALOR DENTRO DA TAG HTML ***********/
+
+
 var hospedeVTotal = hospedeTabela.querySelector(".info-valor-total");// BUSCANDO A TAG ESPECICA PELA CLASSE HTML
 var resultadoVTotal = hospedeVTotal.textContent;// SELECIONANDO A TAG RECUPERADA PELA CLASSE HTML E SELECIONANDO VALOR COM textContent
-hospedeVTotal.textContent = ("R$ " + contaBooking + ",00");
+var tipoPagTotal = true;
 
 var hospedeVDiaria = hospedeTabela.querySelector(".info-valor-diaria");
 var resultadoVdiaria = hospedeVDiaria.textContent;
-hospedeVDiaria.textContent = ("RS " + contaBookingParcial + ",00");
+var tipoPagDiaria = true;
 
+if(pagamentoHospede == 1){
+    console.log("Taxa para opçao: " + pagamentoHospede + " => +2%");  
+    hospedeVTotal.textContent = ("R$ " + contaBooking + ",00");
+    hospedeVDiaria.textContent = ("RS " + contaBookingParcial + ",00");  
+}else if(pagamentoHospede == 2) {
+    console.log("Taxa para opçao: " + pagamentoHospede + " => +5.5%");
+    hospedeVTotal.textContent = ("R$ " + contaBooking + ",00");
+    hospedeVDiaria.textContent = ("RS " + contaBookingParcial + ",00");
+} else if(pagamentoHospede == 3){
+    console.log("Taxa para opçao: " + pagamentoHospede + " => -5%");
+    hospedeVTotal.textContent = ("R$ " + contaBooking + ",00");
+    hospedeVDiaria.textContent = ("RS " + contaBookingParcial + ",00");
+}else{
+    pagamentoValido = false;
+    hospedeVTotal.textContent = ("Error Tipo Pag.");
+    hospedeVDiaria.textContent = ("Error Tipo Pag.");
+}
 
 //*****FINAL ALTERANDO VALOR DENTRO DA TAG HTML ***********/
 
@@ -69,3 +89,5 @@ console.log("TOTAL CODE R$ " + contaBooking + ",00");
 console.log("DIARIA HTML R$ " + resultadoVdiaria);
 console.log("DIARIA CODE R$ " + contaBookingParcial + ",00");
 alert("HOTEL ORION\n\nDiaria ................. R$ " + contaBookingParcial + ",00 \nTotal Reserva ...R$ " + contaBooking + ",00 ");
+
+
