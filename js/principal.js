@@ -122,76 +122,14 @@ for(var i = 0; i < contHospedeTabela.length; i++){//VALOR DE I CONTADO X VEZES O
         //hospedeVTotal.style.color = "#ffffff"; //FAÇO ALTERAÇÃO CHAMANDO A FUNÇAO STYLE.COLOR
     }
 
-    /**************INICIO AÇÃO DA BOTÃO ************************************/
-    var botaoAdicionar = document.querySelector("#adicionar-reserva");
-    console.log(botaoAdicionar)
     
-    botaoAdicionar.addEventListener("click", function(event){
-        event.preventDefault(); //RETIRO EVENTO PADRAO DE ATT A PG
-
-        var form = document.querySelector("#form-adiciona");//SELECIONO MEU FORM PELO ID
-        //***INICIO RECUPERO OS DADOS DO FORM***//
-        var formNome = form.formNome.value;
-        var tipoPagamento = form.tipoPagamento.value;
-        var qtdPessoas = form.qtdPessoas.value;
-        var qtdQuartos = form.qtdQuartos.value;
-        var qtdNoites = form.qtdNoites.value;
-        //***FIM RECUPERO OS DADOS DO FORM***//
-        
-        //***INICIO CRIAR ELELMENTOS TD E TR HTML DO TABLE***//
-        var reservaTr = document.createElement("tr");
-        var nomeTd = document.createElement("td");
-        var tipoPagamentoTd = document.createElement("td");
-        var qtdPessoasTd = document.createElement("td");
-        var qtdQuartosTd = document.createElement("td");
-        var qtdNoitesTd = document.createElement("td");
-        var valorDiariaTd = document.createElement("td");
-        var valorTotalTd = document.createElement("td");
-        //***FIM CRIAR ELELMENTOS TD E TR HTML DO TABLE***//
-
-        //***INICIO POPULAR NOVOS ELEMENTOS TD COM DADOS DO FORM***//
-        nomeTd.textContent = formNome;
-        tipoPagamentoTd.textContent = tipoPagamento;
-        qtdPessoasTd.textContent = qtdPessoas;
-        qtdQuartosTd.textContent = qtdQuartos;
-        qtdNoitesTd.textContent = qtdNoites;
-        valorDiariaTd.textContent = contaBookingParcial;
-        valorTotalTd.textContent = contaBooking;
-        //***FIM POPULAR NOVOS ELEMENTOS TD COM DADOS DO FORM***//
-
-        //****INICIO ADICIONANDO ELEMENTOS TD COMO FILHAS DA TR****//
-        reservaTr.appendChild(nomeTd);
-        reservaTr.appendChild(tipoPagamentoTd);
-        reservaTr.appendChild(qtdPessoasTd);
-        reservaTr.appendChild(qtdQuartosTd);
-        reservaTr.appendChild(qtdNoitesTd);
-        reservaTr.appendChild(valorDiariaTd);
-        reservaTr.appendChild(valorTotalTd);
-        //****FIM ADICIONANDO ELEMENTOS TD COMO FILHAS DA TR****//
-
-        //****INICIO ADICIONANDO NOVO ELEMENTO TR COMO FILHA DO TABLE****//
-        var popularTabelaReservas = document.querySelector("#tabela-reservas");
-        popularTabelaReservas.appendChild(reservaTr);
-        //****FIM ADICIONANDO NOVO ELEMENTO TR COMO FILHA DO TABLE****//
 
 
-        /****************DEBUG PARA TESTE***************** *
-        //alert("Cliquei no Botão")
-        alert("Nome:.............. " + formNome + 
-            "\nTipo Pagamento: " + tipoPagamento +  
-            "\nQtd. Pessoas: " + qtdPessoas + 
-            "\nQtd. Quartos: " + qtdQuartos + 
-            "\nQtd. Noites: " + qtdNoites);
-        console.log("Clique no Botao ");        
-        console.log(formNome);
-        console.log(tipoPagamento);
-        console.log(qtdPessoas);
-        console.log(qtdQuartos);
-        console.log(qtdNoites);
-        */
+    
 
-    });
-    /**************INICIO AÇÃO DA BOTÃO ***********************************/
+
+
+
 
     //*****FINAL ALTERANDO VALOR DENTRO DA TAG HTML ***********/
     alert("HOTEL ORION\n\nHospede......... "
