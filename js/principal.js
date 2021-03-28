@@ -145,6 +145,8 @@ for(var i = 0; i < contHospedeTabela.length; i++){//VALOR DE I CONTADO X VEZES O
         var qtdPessoasTd = document.createElement("td");
         var qtdQuartosTd = document.createElement("td");
         var qtdNoitesTd = document.createElement("td");
+        var valorDiariaTd = document.createElement("td");
+        var valorTotalTd = document.createElement("td");
         //***FIM CRIAR ELELMENTOS TD E TR HTML DO TABLE***//
 
         //***INICIO POPULAR NOVOS ELEMENTOS TD COM DADOS DO FORM***//
@@ -153,6 +155,8 @@ for(var i = 0; i < contHospedeTabela.length; i++){//VALOR DE I CONTADO X VEZES O
         qtdPessoasTd.textContent = qtdPessoas;
         qtdQuartosTd.textContent = qtdQuartos;
         qtdNoitesTd.textContent = qtdNoites;
+        valorDiariaTd.textContent = contaBookingParcial;
+        valorTotalTd.textContent = contaBooking;
         //***FIM POPULAR NOVOS ELEMENTOS TD COM DADOS DO FORM***//
 
         //****INICIO ADICIONANDO ELEMENTOS TD COMO FILHAS DA TR****//
@@ -161,6 +165,8 @@ for(var i = 0; i < contHospedeTabela.length; i++){//VALOR DE I CONTADO X VEZES O
         reservaTr.appendChild(qtdPessoasTd);
         reservaTr.appendChild(qtdQuartosTd);
         reservaTr.appendChild(qtdNoitesTd);
+        reservaTr.appendChild(valorDiariaTd);
+        reservaTr.appendChild(valorTotalTd);
         //****FIM ADICIONANDO ELEMENTOS TD COMO FILHAS DA TR****//
 
         //****INICIO ADICIONANDO NOVO ELEMENTO TR COMO FILHA DO TABLE****//
