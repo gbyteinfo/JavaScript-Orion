@@ -1,11 +1,26 @@
 alert("Buscando Hospede... Clique em Ok");
 var titulo = document.querySelector(".titulo-barra-superior");// BUSCANDO A TAG ESPECICA PELA CLASSE HTML			
-titulo.textContent = "Hotel Orion - Hortolândia"
+titulo.textContent = "Hotel Orion - Hortolândia";
+
+/**************INICIO EVENTO COM CLICK NO TITULO************************/
+titulo.addEventListener("click", function(){alert("Ola, você clicou no titulo!\n " + titulo.textContent)});//MANEIRA MAIS USUAL - FUNÇÃO ANONIMA
+titulo.addEventListener("click", function(){alert("Booking de Reservas")});//MANEIRA MAIS USUAL - FUNÇÃO ANONIMA
+
+/*titulo.addEventListener("click", alertMsgNoTitulo);//FUNÇÃO NOMEADA
+function alertMsgNoTitulo(){
+    alert("Ola, você clicou no titulo! " + titulo.textContent);
+    console.log("Ola, você clicou no titulo!\n" + titulo.textContent);
+}
+
+titulo.addEventListener("click", alert2MsgNoTitulo);//FUNÇÃO NOMEADA
+function alert2MsgNoTitulo(){
+    alert("Booking de Reservas");
+    console.log("Booking de Reservas\n" + titulo.textContent);
+}*/
+/**************INICIO EVENTO COM CLICK NO TITULO************************/
 
 //******INICIO SELEÇÃO DE VALORES COM QUERYSELECTOR*************/
-//************************************************************** */
-//************************************************************** */
-var contHospedeTabela = document.querySelectorAll(".reservas")
+var contHospedeTabela = document.querySelectorAll(".reservas");
 //console.log(contHospedeTabela);
 for(var i = 0; i < contHospedeTabela.length; i++){//VALOR DE I CONTADO X VEZES O LENGTH DE CONSTHOSPEDETABELA
     var hospedeTabela = contHospedeTabela[i];//COLOCO MEU CONTADOR DEM UMA VARIAVEL DENTRO DA ARRAY
