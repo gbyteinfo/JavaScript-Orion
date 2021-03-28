@@ -100,6 +100,12 @@ for(var i = 0; i < contHospedeTabela.length; i++){//VALOR DE I CONTADO X VEZES O
         pagamentoValido = false;
         hospedeVTotal.textContent = ("Error Tipo Pag.");
         hospedeVDiaria.textContent = ("Error Tipo Pag.");
+        hospedeVDiaria.classList.add("backJSclas");
+        hospedeVTotal.classList.add("backJSclas");
+        //hospedeVTotal.style.backgroundColor = "red"//FAÇO ALTERAÇÃO CHAMANDO A FUNÇAO STYLE.COLOR 
+        //hospedeVTotal.style.color = "#ffffff"; //FAÇO ALTERAÇÃO CHAMANDO A FUNÇAO STYLE.COLOR
+        
+
     }
 
     //*****FINAL ALTERANDO VALOR DENTRO DA TAG HTML ***********/

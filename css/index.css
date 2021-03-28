@@ -99,6 +99,7 @@ th{
 	color: greenyellow;
 	font-weight: bold;
 }
+
 label{
 	color: #555;
 	display: block;
@@ -159,4 +160,8 @@ button[disabled=disabled], button:disabled {
 
 .campo-invalido{
 	border: 1px solid red;
+}
+.backJSclas{
+	background: red;
+	color: beige;
 }
