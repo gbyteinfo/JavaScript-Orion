@@ -65,14 +65,10 @@
     -->
     <script>
         //03-new inicializa chamando o .this do objeto criado 
-        var n1 = new Negociacao();//criando objeto
-        n1.quantidade = 10;
+        var n1 = new Negociacao(new Date(), 10, 200);//criando objeto
+        var volume = n1.obteVolume;
         console.log(n1)
-
-        //03-new inicializa chamando o .this do objeto criado 
-        var n2 = new Negociacao();//criando objeto
-        n2.quantidade = 20;
-        console.log(n2);
+        console.log("Quantidade: " + n1.quantidade + " x " + "Valor: " + n1.valor + " = " + volume);
     </script>
 </body>
 </html>
