@@ -59,12 +59,24 @@
         </tfoot>
     </table>
     <script src="js/app/models/Negociacao.js"></script>
+    <!--
+        02-CRIANDO INSTANCIAS GENERICAS PARA OS OBJETOS CRIADOS 
+        NA CLASSE NEGOCIACAO, DEBUGANDO VALORES NO CONSOLE
+    -->
     <script>
-        var n1 = new Negociacao();
-        console.log(n1)
+        //03-OPERADOR NEW É QUEM INICIALIZA CADA OBJETO CRIADO
+        //CADA OBJETO TERA O THIS COM SUAS PROPRIEDADES 
+        var n1 = new Negociacao();//CRIANDO OBJETO A PARTIR DA CLASSE NEGOCIACAO
+        //A PARTIR DAQUI POSSO MANIPULAS AS PROPRIEDADES DO OBJETO
+        n1.quantidade = 10;
+        console.log(n1)//VERIFICANDO
 
-        var n2 = new Negociacao();
-        console.log(n2);
+        //03-OPERADOR NEW É QUEM INICIALIZA CADA OBJETO CRIADO
+        //CADA OBJETO TERA O THIS COM SUAS PROPRIEDADES
+        var n2 = new Negociacao();//CRIANDO OBJETO A PARTIR DA CLASSE NEGOCIACAO
+        //A PARTIR DAQUI POSSO MANIPULAS AS PROPRIEDADES DO OBJETO
+        n2.quantidade = 20;
+        console.log(n2);//VERIFICANDO
     </script>
 </body>
 </html>
