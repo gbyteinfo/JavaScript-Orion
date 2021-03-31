@@ -65,30 +65,10 @@
     -->
     <script>
         
-        let hoje = new Date();
-        //03- new inicializa CLASSE chamando o .this do objeto criado 
-        let n1 = new Negociacao(hoje, 10, 200);//criando objeto
-
-        console.log(n1.data)
-        
-        hoje.setDate(11);// não seta mais 
-        
-        console.log(n1.data)
-
-
-
-
-        //var amanha = new Date();
-        //amanha.setDate(11);
-        //n1.data = amanha;
-
-        //n1._quantidade = 900000;
-        //console.log(n1.quantidade);
-        //console.log(n1.data);
-        //console.log(n1.valor);
-        //console.log(n1.volume);
-        //console.log("Quantidade: " + n1._quantidade + " x " + "Valor: " + n1._valor + " = " + n1.volume);
-        
+        for(let i = 1; i <= 100; i++){ //usar let para declarar variaveis
+            console.log(i);            //so sera acessivel no escopo 
+        }                              //que ela faz parte
+        alert(i)// i foi declarado com let, deve ser acessado dentro do escopo
     </script>
 </body>
 </html>
