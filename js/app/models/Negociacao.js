@@ -7,7 +7,7 @@ class Negociacao {
         this._quantidade = quantidade;
         this._valor = valor;
         
-        Object.freeze(this);// CONGELANDO MEU METODO DRETAMENTE NA CLASSE
+        Object.freeze(this);// dib.free so congela as propriedades do objeto atual
         
     }
     //ENCAPSULAMENTO E METODOS DE LEITURA

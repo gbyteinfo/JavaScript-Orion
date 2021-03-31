@@ -66,12 +66,24 @@
     <script>
         //03- new inicializa CLASSE chamando o .this do objeto criado 
         var n1 = new Negociacao(new Date(), 10, 200);//criando objeto
-        n1._quantidade = 900000;
-        console.log(n1.quantidade);
-        console.log(n1.data);
-        console.log(n1.valor);
-        console.log(n1.volume);
-        console.log("Quantidade: " + n1._quantidade + " x " + "Valor: " + n1._valor + " = " + n1.volume);
+        console.log(n1.data)
+        
+        n1.data.setDate(11);
+
+        console.log(n1.data)
+
+
+
+        //var amanha = new Date();
+        //amanha.setDate(11);
+        //n1.data = amanha;
+
+        //n1._quantidade = 900000;
+        //console.log(n1.quantidade);
+        //console.log(n1.data);
+        //console.log(n1.valor);
+        //console.log(n1.volume);
+        //console.log("Quantidade: " + n1._quantidade + " x " + "Valor: " + n1._valor + " = " + n1.volume);
         
     </script>
 </body>
