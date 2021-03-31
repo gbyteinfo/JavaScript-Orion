@@ -3,7 +3,7 @@
 //PARA A APLICAÇÃO, CLIENADO MINHA PRIMEIRA CLASSE DA APP 
 class Negociacao {
     constructor(data, quantidade,valor){
-        this._data = data;
+        this._data = new Date(data.getDate());
         this._quantidade = quantidade;
         this._valor = valor;
         
@@ -15,7 +15,7 @@ class Negociacao {
         return this._quantidade * this._valor;
     }
     get data(){
-        return this._data;
+        return new Date(this._data.getTime());// retorno uma nova Date() baseada na data da class Negociação 
     }
     get quantidade(){
         return this._quantidade;

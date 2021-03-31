@@ -64,13 +64,17 @@
         na classe negociação, debugando valores no console
     -->
     <script>
-        //03- new inicializa CLASSE chamando o .this do objeto criado 
-        var n1 = new Negociacao(new Date(), 10, 200);//criando objeto
-        console.log(n1.data)
         
-        n1.data.setDate(11);
+        let hoje = new Date();
+        //03- new inicializa CLASSE chamando o .this do objeto criado 
+        let n1 = new Negociacao(hoje, 10, 200);//criando objeto
 
         console.log(n1.data)
+        
+        hoje.setDate(11);// não seta mais 
+        
+        console.log(n1.data)
+
 
 
 
