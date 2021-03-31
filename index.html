@@ -66,11 +66,12 @@
     <script>
         //03-new inicializa chamando o .this do objeto criado 
         var n1 = new Negociacao(new Date(), 10, 200);//criando objeto
-        console.log(n1.getQuantidade());
-        console.log(n1.getData());
-        console.log(n1.getValor());
-        console.log(n1.getVolume());
-        console.log("Quantidade: " + n1._quantidade + " x " + "Valor: " + n1._valor + " = " + n1.getVolume());
+        n1._quantidade = 5000; //AINDA ESTA ALTERANDO
+        console.log(n1.quantidade);
+        console.log(n1.data);
+        console.log(n1.valor);
+        console.log(n1.volume);
+        console.log("Quantidade: " + n1._quantidade + " x " + "Valor: " + n1._valor + " = " + n1.volume);
         
     </script>
 </body>
