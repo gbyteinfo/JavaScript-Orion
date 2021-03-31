@@ -12,8 +12,8 @@ class NegociacaoController{
             event.preventDefault();        
             
             //2021-03-21    
-            let data = new Date(this._inputData.value.replace(/-/g, ','));
+            let data = new Date(this._inputData.value.replace(/-/g, ','));//tratando o recebimento data
 
-            console.log(data);            
+            console.log(data);//bjeto data configurado para ser tratado          
     }
 }
