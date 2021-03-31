@@ -66,12 +66,7 @@
     <script>
         //03- new inicializa CLASSE chamando o .this do objeto criado 
         var n1 = new Negociacao(new Date(), 10, 200);//criando objeto
-        
-        console.log(Object.isFrozen(n1));//VERIFICANDO SE MEU OBJETO ESTA CONGELADO
-        Object.freeze(n1);// CONGELANDO MEU OBJETO, METODO PROCEDURAL
-        n1._quantidade = 9999999999;//OBJEJETO CONGELADO, NAO ALTERA FORA DA CLASSE
-        console.log(Object.isFrozen(n1));
-
+        n1._quantidade = 900000;
         console.log(n1.quantidade);
         console.log(n1.data);
         console.log(n1.valor);
