@@ -20,12 +20,8 @@ class NegociacaoController{
             let data = new Date(...
                 this._inputData.value
                 .split('-')//SPLIT CRIA O ARRAY DO VALOR DATA, "¹ITEM MES INICIA NO 0
-                .map(function(item, indice) {//VARRE TODO O ARRAY
-                    if(indice == 1){
-                        return item - 1; //"¹DECREMENTO O MES PARA EXECUTAR O CORRETO
-                    }else {
-                        return item;
-                    }
+                .map(function(item, indice) {//VARRE TODO O ARRAY ITEM POR ITEM
+                    return item - indice % 2;//"¹DECREMENTO O MES PARA EXECUTAR O CORRETO
                 })
             );//tratando o recebimento data
 
