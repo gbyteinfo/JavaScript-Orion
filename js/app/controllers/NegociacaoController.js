@@ -25,5 +25,6 @@ class NegociacaoController{
             )
             console.log(data);
             console.log(negociacao);
+
     }
 }
