@@ -3,10 +3,11 @@
 //PARA A APLICAÇÃO, CLIENADO MINHA PRIMEIRA CLASSE DA APP 
 class Negociacao {
     constructor(data, quantidade,valor){
-        this._data = new Date(data.getDate());
+        this._data = new Date(data.getTime());
         this._quantidade = quantidade;
         this._valor = valor;
         
+       
         Object.freeze(this);// dib.free so congela as propriedades do objeto atual
         
     }
