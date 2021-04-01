@@ -11,6 +11,9 @@ class ContadorController {
         return this._contador;
     }
 
+    
+    
+    
     incrementa() {
         this._contador++;
         document.querySelector('#p1').textContent = this._contador;
