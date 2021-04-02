@@ -9,17 +9,18 @@ class NegociacaoController{
         adiciona(event){
             event.preventDefault();
 
-            let helper = new DateHelper(); //ACICIONANDO MINHA CLASSE NA VARIAVEL
+            //let helper = new DateHelper(); //ACICIONANDO MINHA CLASSE NA VARIAVEL
             //let data = helper.textoParaData(this._inputData.value);
             
             let negociacao = new Negociacao(
-                helper.textoParaData(this._inputData.value),//USANDO DIRETAMENTE O RETORNO DATA
+                //DATEHELPER SENDO CHAMADA NA CLASSE, METODOS DEFINIDOS COMO STATICOS
+                DateHelper.textoParaData(this._inputData.value),//USANDO DIRETAMENTE O RETORNO DATA
                 this._inputQuantidade.value,
                 this._inputValor.value
             );
 
-            //console.log(negociacao);
+            console.log(negociacao);
 
-            console.log(helper.dataParaTexto(negociacao.data));
+            console.log(DateHelper.dataParaTexto(negociacao.data));
         };
 }
