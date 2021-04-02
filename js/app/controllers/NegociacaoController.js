@@ -9,9 +9,16 @@ class NegociacaoController{
         adiciona(event){
             event.preventDefault();//PARO O O ENVIO DO FORM PELO METODO DO HTML
             this._listaNegociacoes.adiciona(this._criaNegociacao());//ADICIONA NA LISTA
+            this._listaNegociacoes.negociacoes.push(this._criaNegociacao());
             this._limpaFormulario();//LIMPA A LISTA
-            console.log(this._listaNegociacoes.Negociacoes); 
 
+            
+
+
+            console.log(this._listaNegociacoes.negociacoes); 
+           
+            
+            
         };
 
         //METODO PARA CRIAR NEGOCIACAO
@@ -22,6 +29,7 @@ class NegociacaoController{
                 DateHelper.textoParaData(this._inputData.value),//USANDO DIRETAMENTE O RETORNO DATA
                 this._inputQuantidade.value,
                 this._inputValor.value);
+                
         };
 
         //METODO PARA LIMPAR O FORMULARIO
@@ -37,9 +45,3 @@ class NegociacaoController{
             //this._inputValor.focus();    
         };
 }
-            //alert(`
-            //    ADICIONADO: \n
-            //    Data:............... ${this._criaNegociacao(DateHelper.textoParaData(this._inputData.value))}
-            //    Quantidade:.. ${this._inputQuantidade.value}
-            //    Valor:.............. ${this._inputValor.value} 
-            //`);
