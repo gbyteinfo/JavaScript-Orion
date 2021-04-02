@@ -2,10 +2,10 @@
 class DateHelper{
 
     //METODO PARA RECER UMA DATA E CONVERTER EM TEXTO
-    dataPataTexto(data){
+    dataParaTexto(data){
 
-        return data.getData() + '/' + 
-                (data.getMouth() + 1) + '/' + 
+        return data.getDate() + '/' + 
+                (data.getMonth() + 1) + '/' + 
                  data.getFullYear();
     }
 
