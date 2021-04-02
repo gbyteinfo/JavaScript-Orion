@@ -6,7 +6,7 @@ class NegociacaoController{
         this._inputValor = $('#valor');
         this._listaNegociacoes = new ListaNegociacoes();
         };
-        adiciona(event){
+        adiciona(event){/
             event.preventDefault();//PARO O O ENVIO DO FORM PELO METODO DO HTML
             this._listaNegociacoes.adiciona(this._criaNegociacao());//ADICIONA NA LISTA
             this._limpaFormulario();//LIMPA A LISTA  
