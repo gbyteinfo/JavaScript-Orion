@@ -8,28 +8,16 @@ class NegociacaoController{
         };
         adiciona(event){
             event.preventDefault();
-
-            //console.log("Data no Metodo Adiciona: " + this._inputData.value);
-            let data = new Date(
-                ...this._inputData.value
-                .split('-')
-                .map((item, indice) => item - indice % 2)
-            );
-            //console.log("Data no Metodo Adiciona depois: " + this._inputData.value);
+            let helper = new DateHelper(); //ACICIONANDO MINHA CLASSE NA VARIAVEL
+            let data = helper.textoParaData(this._inputData.value);
             
             let negociacao = new Negociacao(
                 data,
                 this._inputQuantidade.value,
                 this._inputValor.value
             );
-            let diaMesAno = negociacao.data.getDate() + ' / ' 
-                          + (negociacao.data.getMonth() + 1) + ' / ' //CONTADOR DO MES DENTRO DO ARRAY INICIA NO 0
-                          + negociacao.data.getFullYear() ; 
 
-
-            //console.log(diaMesAno);
-            //console.log(data);
-            //console.log("Data depois da classe negociacao: " + negociacao.data);
-
+            console.log(negociacao)
+            console.log(diaMesAno)
         };
 }

@@ -12,7 +12,7 @@ class DateHelper{
     //MÉTODO PARA RECEBER UM TEXTO E CONVERTER EM DATA
     textoParaData(texto){
         
-        return Date(...this.texto.split('-').map((item, indice) => item - indice % 2));
+        return new Date(...texto.split('-').map((item, indice) => item - indice % 2));
 
         
     }
