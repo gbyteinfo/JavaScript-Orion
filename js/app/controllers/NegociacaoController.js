@@ -18,7 +18,7 @@ class NegociacaoController{
                 this._inputValor.value
             );
 
-            console.log(negociacao);
+            //console.log(negociacao);
 
             console.log(helper.dataParaTexto(negociacao.data));
         };

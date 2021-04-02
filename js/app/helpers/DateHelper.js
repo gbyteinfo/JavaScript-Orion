@@ -1,6 +1,6 @@
 //CLASSE AJUDANTE SERA RESPONSAVEL ISOLADO EM LIDAR COM A DATA
 class DateHelper{
-
+    //constructor(){}por padrao é criado esse constructor e executado
     //METODO PARA RECER UMA DATA E CONVERTER EM TEXTO
     dataParaTexto(data){
 
