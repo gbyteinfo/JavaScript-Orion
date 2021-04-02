@@ -7,31 +7,24 @@ class NegociacaoController{
         this._listaNegociacoes = new ListaNegociacoes();
         };
         adiciona(event){
-            event.preventDefault();
+            event.preventDefault();//PARO O O ENVIO DO FORM PELO METODO DO HTML
+            this._listaNegociacoes.adiciona(this._criaNegociacao());//ADICIONA NA LISTA
+            this._limpaFormulario();//LIMPA A LISTA
+            console.log(this._listaNegociacoes.Negociacoes); 
 
-            // 1 CRIA NEGOCIÇÃO
-            let negociacao = new Negociacao(
+        };
+
+        //METODO PARA CRIAR NEGOCIACAO
+        //METODO SÓ PODE SER CHAMADO PELA CLASSE
+        _criaNegociacao(){
+            return new Negociacao(
                 //DATEHELPER SENDO CHAMADA NA CLASSE, METODOS DEFINIDOS COMO STATICOS
                 DateHelper.textoParaData(this._inputData.value),//USANDO DIRETAMENTE O RETORNO DATA
                 this._inputQuantidade.value,
-                this._inputValor.value
-            );
-                
-            //ADICIONA NA LISTA
-            this._listaNegociacoes.adiciona(negociacao);
-            alert(`
-                ADICIONADO: \n
-                Data:............... ${DateHelper.dataParaTexto(negociacao.data)}
-                Quantidade:.. ${this._inputQuantidade.value}
-                Valor:.............. ${this._inputValor.value} 
-            `);
-            //LIMPA A LISTA
-
-            console.log(this._listaNegociacoes.Negociacoes);
-            this._limpaFormulario();
+                this._inputValor.value);
         };
 
-        //metodo so pode ser chamado pela classe
+        //METODO PARA LIMPAR O FORMULARIO
         //METODO SÓ PODE SER CHAMADO PELA CLASSE
         _limpaFormulario(){
             this._inputData.value = '';
@@ -39,10 +32,14 @@ class NegociacaoController{
             this._inputValor.value = 0.0;
 
             //DEFNINDO O FOCUS (CURSOR DEPOIS DA OPERACAO)
-            this._inputData.focus();
-            //this._inputQuantidade.focus();
-            //this._inputValor.focus();
-            
-            
-        }
+            //this._inputData.focus();
+            this._inputQuantidade.focus();
+            //this._inputValor.focus();    
+        };
 }
+            //alert(`
+            //    ADICIONADO: \n
+            //    Data:............... ${this._criaNegociacao(DateHelper.textoParaData(this._inputData.value))}
+            //    Quantidade:.. ${this._inputQuantidade.value}
+            //    Valor:.............. ${this._inputValor.value} 
+            //`);
