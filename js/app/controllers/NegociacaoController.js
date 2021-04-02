@@ -18,6 +18,5 @@ class NegociacaoController{
 
             this._listaNegociacoes.adiciona(negociacao);
             console.log(this._listaNegociacoes.Negociacoes);
-
         };
 }
