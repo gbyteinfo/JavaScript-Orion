@@ -8,7 +8,8 @@ class ListaNegociacoes{
         this._negociacoes.push(negociacao);
     };
     get negociacoes(){
-        //BLINDANDO O METODO
+        //BLINDANDO O METODO CRIANDO UM ARRAY VAZIO ANTES DE CRIAR APENAS 1 CORRETO(COMO ZERARO ARRAY ANTERIOR)
         return [].concat(this._negociacoes);//CRIA UM NOVO ARRAY CO METODO NEGOCIAÇÃO
+        
     };
 }
