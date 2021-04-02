@@ -27,8 +27,8 @@ class NegociacaoController{
                           + negociacao.data.getFullYear() ; 
 
 
-            console.log(diaMesAno);
-            console.log(data);
+            //console.log(diaMesAno);
+            //console.log(data);
             //console.log("Data depois da classe negociacao: " + negociacao.data);
 
         };
