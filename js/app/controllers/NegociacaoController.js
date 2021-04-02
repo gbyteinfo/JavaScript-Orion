@@ -9,16 +9,7 @@ class NegociacaoController{
         adiciona(event){
             event.preventDefault();//PARO O O ENVIO DO FORM PELO METODO DO HTML
             this._listaNegociacoes.adiciona(this._criaNegociacao());//ADICIONA NA LISTA
-            this._listaNegociacoes.negociacoes.push(this._criaNegociacao());
-            this._limpaFormulario();//LIMPA A LISTA
-
-            
-
-
-            console.log(this._listaNegociacoes.negociacoes); 
-           
-            
-            
+            this._limpaFormulario();//LIMPA A LISTA  
         };
 
         //METODO PARA CRIAR NEGOCIACAO
