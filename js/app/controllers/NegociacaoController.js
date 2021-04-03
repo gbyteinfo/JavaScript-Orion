@@ -5,6 +5,7 @@ class NegociacaoController{
         this._inputQuantidade = $('#quantidade');
         this._inputValor = $('#valor');
         this._listaNegociacoes = new ListaNegociacoes();
+        this._negociacoesView = new NegociacoesView();
         };
         adiciona(event){
             event.preventDefault();//PARO O O ENVIO DO FORM PELO METODO DO HTML
