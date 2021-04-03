@@ -37,9 +37,8 @@ class NegociacoesView{
                 
                 ${
                     //EXPREÇÃO PARA RECEBER TOTAL COM PARADIGMA FUNCIONAL
-                    model.negociacoes.reduce(function(total, n){
-                        return total + n.volume;
-                    },0.0)
+                    //UTILIZANDO ARROW FUNCTION
+                    model.negociacoes.reduce((total, n) => total + n.volume, 0.0)
 
 
                     /*//EXPREÇAO PARA RECEBER O TOTAL DAS NEGOCIACOES
