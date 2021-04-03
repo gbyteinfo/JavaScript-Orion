@@ -1,4 +1,5 @@
-
+//by jorge mira @hst
+//CRIANDO DATAS E MANIPULANDO TODAS ELAS
 console.log("TESTANDO DATAS\n\n\n\n");
 
 //1 - Data instanciada sem parametros
