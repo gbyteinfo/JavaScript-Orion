@@ -32,6 +32,20 @@ class NegociacoesView{
             </tbody>
             
             <tfoot>
+                <td colspan="3"></td>
+                <td>
+
+                ${
+                    //EXPREÇAO PARA RECEBER O TOTAL DAS NEGOCIACOES
+                    //Immediately Invoked Function Expression
+                    //UTILIZANDO IIFE
+                    (function(){
+                        let total= 0;
+                    model.negociacoes.forEach(n => total += n.volume);
+                    return total;
+                })()}
+                    
+                </td>
             </tfoot>
         </table>`;
     }
