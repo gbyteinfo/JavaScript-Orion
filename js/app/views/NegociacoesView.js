@@ -34,16 +34,23 @@ class NegociacoesView{
             <tfoot>
                 <td colspan="3"></td>
                 <td>
-
+                
                 ${
-                    //EXPREÇAO PARA RECEBER O TOTAL DAS NEGOCIACOES
+                    //EXPREÇÃO PARA RECEBER TOTAL COM PARADIGMA FUNCIONAL
+                    model.negociacoes.reduce(function(total, n){
+                        return total + n.volume;
+                    },0.0)
+
+
+                    /*//EXPREÇAO PARA RECEBER O TOTAL DAS NEGOCIACOES
                     //Immediately Invoked Function Expression
                     //UTILIZANDO IIFE
                     (function(){
                         let total= 0;
                     model.negociacoes.forEach(n => total += n.volume);
                     return total;
-                })()}
+                    })()*/
+                }
                     
                 </td>
             </tfoot>
