@@ -8,11 +8,6 @@ class DateHelper{
         //USANDO TEMPLATE STRING PARA FAZER INTERPOLACAO COM A STRING
         //PODENDO TAMBEM SEPARAR POR LINHAS
         return `${data.getDate()} / ${data.getMonth() + 1} / ${data.getFullYear()}`;
-        //return `Adicionado com Template String: Data=> ${data.getDate()} | Mês=> ${data.getMonth() + 1} | Ano=> ${data.getFullYear()}`;
-
-        //return data.getDate() + '/' + 
-        //        (data.getMonth() + 1) + '/' + 
-        //         data.getFullYear();
     }
 
 
