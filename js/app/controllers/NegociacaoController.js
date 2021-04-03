@@ -7,11 +7,14 @@ class NegociacaoController{
         this._listaNegociacoes = new ListaNegociacoes();
         this._negociacoesView = new NegociacoesView($('#negociacoesView'));
 
-        this._negociacoesView.update(); 
+        //Atualizando a tabela na pagina 
+        this._negociacoesView.update(this._listaNegociacoes); 
         };
         adiciona(event){
             event.preventDefault();//PARO O O ENVIO DO FORM PELO METODO DO HTML
             this._listaNegociacoes.adiciona(this._criaNegociacao());//ADICIONA NA LISTA
+            //Atualizando a tabela na pagina 
+            this._negociacoesView.update(this._listaNegociacoes); 
             this._limpaFormulario();//LIMPA A LISTA  
         };
 

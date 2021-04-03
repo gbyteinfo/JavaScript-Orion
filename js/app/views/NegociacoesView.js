@@ -5,7 +5,7 @@ class NegociacoesView{
 
     }
 
-    _template(){
+    _template(model){
 
         return `<table class="table table-hover table-bordered">
             <thead>
@@ -18,6 +18,17 @@ class NegociacoesView{
             </thead>
             
             <tbody>
+                <!--INCLUINDO JUNÇÃO E PARAMENTROS PARA CHAMADA DO TEMPLATE-->
+                ${model.negociacoes.map(n => {
+                    return `
+                        <tr>
+                            <td>${DateHelper.dataParaTexto(n.data)}</td>
+                            <td>${n.quantidade}</td>
+                            <td>${n.valor}</td>
+                            <td>${n.volume}</td>
+                        </tr>
+                    `;
+                }).join()}
             </tbody>
             
             <tfoot>
@@ -25,8 +36,8 @@ class NegociacoesView{
         </table>`;
     }
 
-    update(){
-        this._elemento.innerHTML = this._template();
+    update(model){
+        this._elemento.innerHTML = this._template(model);
     }
-    
+
 }
