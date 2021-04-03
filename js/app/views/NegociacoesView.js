@@ -1,6 +1,13 @@
 class NegociacoesView{
-    template(){
-        `<table class="table table-hover table-bordered">
+
+    constructor(elemento){
+        this._elemento = elemento;
+
+    }
+
+    _template(){
+
+        return `<table class="table table-hover table-bordered">
             <thead>
                 <tr>
                     <th>DATA</th>
@@ -15,6 +22,11 @@ class NegociacoesView{
             
             <tfoot>
             </tfoot>
-        </table>`
+        </table>`;
     }
+
+    update(){
+        this._elemento.innerHTML = this._template();
+    }
+    
 }
