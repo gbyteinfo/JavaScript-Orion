@@ -6,22 +6,25 @@ class NegociacaoController{
         this._inputValor = $('#valor');
         this._listaNegociacoes = new ListaNegociacoes();
         this._negociacoesView = new NegociacoesView($('#negociacoesView'));
+        this._negociacoesView.update(this._listaNegociacoes);
+
         this._mensagem = new Mensagem();
+        this._mensagemView = new MensagemView($('#mensagemView'));
+        this._mensagemView.update(this._mensagem)
 
-
-        //Atualizando a tabela na pagina 
-        this._negociacoesView.update(this._listaNegociacoes); 
+       
         };
         adiciona(event){
             event.preventDefault();//PARO O O ENVIO DO FORM PELO METODO DO HTML
             this._listaNegociacoes.adiciona(this._criaNegociacao());//ADICIONA NA LISTA
-            
-            this._mensagem.texto = `Negociação Adicionada com sucesso`;//SETANDO MENSAGEM PADRAO PASSANDO PELA CLASSE MENSAGEM
-            console.log(this._mensagem.texto);
-
             //Atualizando a tabela na pagina 
-            this._negociacoesView.update(this._listaNegociacoes); 
-            this._limpaFormulario();//LIMPA A LISTA  
+            this._negociacoesView.update(this._listaNegociacoes);   
+
+            this._mensagem.texto = `Negociação Adicionada com sucesso`;//SETANDO MENSAGEM PADRAO PASSANDO PELA CLASSE MENSAGEM
+            this._mensagemView.update(this._mensagem);
+            this._limpaFormulario();//LIMPA A LISTA
+
+        
         };
 
         //METODO PARA CRIAR NEGOCIACAO
