@@ -12,4 +12,7 @@ class ListaNegociacoes{
         return [].concat(this._negociacoes);//CRIA UM NOVO ARRAY CO METODO NEGOCIAÇÃO
         
     };
+    esvazia(){
+        return this._negociacoes = [];
+    }
 }

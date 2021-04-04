@@ -27,6 +27,15 @@ class NegociacaoController{
         
         };
 
+        esvaziaMetodo(){
+            this._listaNegociacoes.esvazia();
+            this._negociacoesView.update(this._listaNegociacoes);
+
+            this._mensagem.texto = `Lista de negociações apagas com sucesso`;
+            this._mensagemView.update(this._mensagem);
+            
+        }
+
         //METODO PARA CRIAR NEGOCIACAO
         //METODO SÓ PODE SER CHAMADO PELA CLASSE
         _criaNegociacao(){
