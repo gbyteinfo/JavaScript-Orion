@@ -53,7 +53,21 @@
     <script>
 
        let negociacaoController = new NegociacaoController(); 
-       
+            
+    </script>
+    <script>
+        
+        let negociacao = new Proxy(new Negociacao(new Date("2/01/2019"), 1, 100), {
+            get: function(target, prop, receiver){
+                console.log(`a propriedade "${prop}" foi intercepitada`);
+                
+                return Reflect.get(target, prop, receiver);
+            }
+        });
+        console.log(negociacao.data);
+        console.log(negociacao.quantidade);
+        console.log(negociacao.valor);
+        
     </script>
 
 </body>
