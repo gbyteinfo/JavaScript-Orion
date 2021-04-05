@@ -16,7 +16,7 @@ class NegociacoesView extends View{
             
             <tbody>
                 <!--INCLUINDO JUNÇÃO E PARAMENTROS PARA CHAMADA DO TEMPLATE-->
-                ${model.Negociacoes.map(n => 
+                ${model.negociacoes.map(n => 
 
                     `<tr>
                         <td>${DateHelper.dataParaTexto(n.data)}</td>
