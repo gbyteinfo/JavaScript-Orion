@@ -6,21 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript - Taboada</title>
 </head>
-<body>
-    
-    <h1>
-        <script>console.log()</script> 
-        Tabuada 
-    </h1>
+<body><h1>Tabuada</h1><body>
 
-</body>
 <script>
+
+    function pulaLinha(){
+        document.write("<br>");
+    };
+    function mostra(resultado){
+        document.write(resultado);
+        pulaLinha();
+
+    };
+    mostra();
+
     var dividendo = 0;
     var dividido = 0;
     for(dividendo = 1; dividido <= 10; dividido++){
-        document.write(`<b><br><br>Tabuada do => ${dividido}</b><br>`)
-    for(dividendo = 0; dividendo <= 10; dividendo++){
-        document.write(`${dividido} X ${dividendo} = ${resultado = dividendo * dividido}; Esse mesmo ${resultado} + 1 é: ${Math.round(resultado + 1)}<br> `);
-    }}
+        mostra(`Tabuada do => ${dividido}</b><br>`);
+        for(dividendo = 0; dividendo <= 10; dividendo++){
+            mostra(`${dividido} X ${dividendo} = ${resultado = dividendo * dividido}; Esse mesmo ${resultado} + 1 é: ${Math.round(resultado + 1)}`);
+        }
+    }
+
 </script>
+
 </html>
