@@ -26,10 +26,15 @@
     var empates = parseInt(prompt(`Digite o numero de Empates: `))
     var pontos = (vitorias * 3) + empates;
 
+    if(pontos > 28){
+        mostra(`PARABENS - Seu Time esta MELHOR que a temporada passada`);    
+    }else if(pontos == 28 ){
+        mostra(`TRABALHO CONCLUIDO - Seu Time esta IGUAL a temporada passada`);
+    }else{
+        mostra(`CABEÇAS IRAO ROLAR - Seu Time esta PIOR que a temporada passada`);
+    }
+
     mostra(`A pontuação alcançada foi: ${pontos}`);
-    mostra(`Seu Time esta MELHOR igual temporada passada`);
-    mostra(`Seu Time esta PIOR igual temporada passada`);
-    mostra(`Seu Time esta IGUAL igual temporada passada`);
-    
+
     </script>
 </html>
