@@ -23,20 +23,19 @@
     function fechaNgrito(){
         mostra('</b>')
     }
-    function calculaIMC(peso1, altura1, peso2, altura2){
-        var imc1 = peso1 / (altura1 * altura1);
-        var imc2 = peso2 / (altura2 * altura2);
-        var somaImc = imc1+imc2;     
-        mostra(`O Imc da Fernanda é ${imc1}`);    
-        mostra(`O Imc da Julia é ${imc2}`);
-        mostra(`A soma dos IMCs da Fernanda e Julia é: ${somaImc}}`)
-    
+    function calculaIMC(peso, altura){
+        var imc = peso / (altura * altura);
+        return imc;
     }
 
     //*********** Fernanda e Julia**********************************
-    calculaIMC(61, 1.71, 59, 1.60)
-    pulaLinha()
-    //*********** Fernanda **********************************
+    var imcFernanda = calculaIMC(61, 1.71)
+    var imcJulia= calculaIMC(59, 1.60)
+
+    mostra(`O Imc da Fernanda é ${imcFernanda}`);    
+    mostra(`O Imc da Julia é ${imcJulia}`);
+
+    //*********** Fernanda e Julia**********************************
 
 
 
