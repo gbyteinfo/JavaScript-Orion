@@ -15,19 +15,20 @@
     function mostra(frase){
         document.write(frase);
         pulaLinha();
-
     }
-    var pesoFernanda = 62;
-    var alturaFernanda = 1.68;
-    var imcFernanda = pesoFernanda / (pesoFernanda * alturaFernanda);
-    mostra(`O imc da Fernanda é ${imcFernanda}`);
+    function calculaIMC(){
+        var imc = peso / (altura * altura);    
+    }
+
+    //*********** Fernanda **********************************
+    calculaIMC(61, 1,71);
     pulaLinha();
-
-    var pesoJulia = 55;
-    var alturaJulia = 1.69;
-    var imcJulia = pesoJulia / (pesoJulia * alturaJulia);
-    mostra(`O imc da Julia é ${imcJulia}`);
-
+    //*********** Fernanda **********************************
+    
+    //*********** Julia *************************************
+    calculaIMC(59, 1.60);
+    pulaLinha();
+    //*********** Julia *************************************
 
 
 
