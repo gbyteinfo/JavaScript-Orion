@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VITÓRIAS - JS</title>
+</head>
+<body><h1>Numero de Vitórias em JS</h1></body>
+<script>
+    //FUNÇÕES
+    
+    function pulaLinha(){
+        document.write("<br>");
+        document.write("<br>")
+    }
+    function mostra(frase){
+        document.write(frase);
+        pulaLinha();
+    }
+    function pontos(pontos){
+    
+    }
+
+    var vitorias = parseInt(prompt(`Digite o numero de Vitórias: `));
+    var empates = parseInt(prompt(`Digite o numero de Empates: `))
+    var pontos = (vitorias * 3) + empates;
+
+    mostra(`A pontuação alcançada foi: ${pontos}`);
+    mostra(`Seu Time esta MELHOR igual temporada passada`);
+    mostra(`Seu Time esta PIOR igual temporada passada`);
+    mostra(`Seu Time esta IGUAL igual temporada passada`);
+    
+    </script>
+</html>
