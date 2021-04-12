@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMC - JS</title>
+</head>
+<body><h1>IMC em JS</h1></body>
+<script>
+    //FUNÇÕES
+    function pulaLinha(){
+    document.write("<br>");
+    }
+    function mostra(frase){
+        document.write(frase);
+        pulaLinha();
+
+    }
+    var pesoFernanda = 62;
+    var alturaFernanda = 1.68;
+    var imcFernanda = pesoFernanda / (pesoFernanda * alturaFernanda);
+    mostra(`O imc da Fernanda é ${imcFernanda}`);
+    pulaLinha();
+
+    var pesoJulia = 55;
+    var alturaJulia = 1.69;
+    var imcJulia = pesoJulia / (pesoJulia * alturaJulia);
+    mostra(`O imc da Julia é ${imcJulia}`);
+
+
+
+
+
+</script>
+</html>
