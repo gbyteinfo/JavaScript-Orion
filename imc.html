@@ -16,12 +16,13 @@
         document.write(frase);
         pulaLinha();
     }
-    function calculaIMC(){
+    function calculaIMC(peso, altura){
         var imc = peso / (altura * altura);    
+        mostra(`O Imc calculado é ${imc}`)
     }
 
     //*********** Fernanda **********************************
-    calculaIMC(61, 1,71);
+    calculaIMC(61, 1.71);
     pulaLinha();
     //*********** Fernanda **********************************
     
