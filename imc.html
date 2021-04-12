@@ -8,8 +8,7 @@
 </head>
 <body><h1>IMC em JS</h1></body>
 <script>
-    //FUNÇÕES
-    
+    //*****FUNÇÕES******************************************
     function pulaLinha(){
         document.write("<br>")
     }
@@ -20,11 +19,25 @@
     function calculaIMC(peso, altura){
         return imc = peso / (altura * altura);
     }
-    //*********** IMC USUARIO PROMPT *********************************
+    //*****FUNÇÕES********************************************
+    
+    
+
+
+    //*********** IMC USUARIO PROMPT *************************
     var nome = prompt("Qual o seu Nome?");
-    peso = prompt(`${nome} qual seu PESO?`);
-    altura = prompt(`${nome} e sua ALTURA?`);
-    mostra(`O IMC de ${nome} é: ${calculaIMC(61, 1.71)}`);    
-    //*********** IMC USUARIO PROMPT **********************************
+    var peso = prompt(`${nome} qual seu PESO?`);
+    var altura = prompt(`${nome} e sua ALTURA?`);
+    mostra(`O IMC de ${nome} é: ${calculaIMC(peso, altura)}`);    
+    //*********** IMC USUARIO PROMPT *************************
+
+    if(imc <= 18.5){
+        mostra(`${nome}, você esta <b>Abaixo</b> do Indice Corporal Recomendado`);
+    }else if(imc >= 35){
+        mostra(`${nome}, você esta <b>Acima</b> do Indice Corporal Recomendado`);    
+    }else{
+        mostra(`${nome}, você esta <b>Igual</b> do Indice Corporal Recomendado`);   
+    }
+
 </script>
 </html>
