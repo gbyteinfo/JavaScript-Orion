@@ -9,28 +9,34 @@
 <body><h1>IMC em JS</h1></body>
 <script>
     //FUNÇÕES
+    
     function pulaLinha(){
-    document.write("<br>");
+        document.write("<br>")
     }
     function mostra(frase){
-        document.write(frase);
-        pulaLinha();
+        document.write(frase)
+        pulaLinha()
     }
-    function calculaIMC(peso, altura){
-        var imc = peso / (altura * altura);    
-        mostra(`O Imc calculado é ${imc}`)
+    function abreNegrito(){
+        mostra(`<b>`);
     }
-
-    //*********** Fernanda **********************************
-    calculaIMC(61, 1.71);
-    pulaLinha();
-    //*********** Fernanda **********************************
+    function fechaNgrito(){
+        mostra('</b>')
+    }
+    function calculaIMC(peso1, altura1, peso2, altura2){
+        var imc1 = peso1 / (altura1 * altura1);
+        var imc2 = peso2 / (altura2 * altura2);
+        var somaImc = imc1+imc2;     
+        mostra(`O Imc da Fernanda é ${imc1}`);    
+        mostra(`O Imc da Julia é ${imc2}`);
+        mostra(`A soma dos IMCs da Fernanda e Julia é: ${somaImc}}`)
     
-    //*********** Julia *************************************
-    calculaIMC(59, 1.60);
-    pulaLinha();
-    //*********** Julia *************************************
+    }
 
+    //*********** Fernanda e Julia**********************************
+    calculaIMC(61, 1.71, 59, 1.60)
+    pulaLinha()
+    //*********** Fernanda **********************************
 
 
 
