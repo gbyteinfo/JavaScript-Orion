@@ -24,15 +24,16 @@
         var numero = 1;
         while(numero <= quantidade){
             var numeroAleatorio = sorteia();
-            achou = false;
-
-            for(posicao = 0; posicao < segredos.length; posicao++){
-                if(segredos[posicao] == numeroAleatorio){
-                    achou = true;
-                    break;
+            if (numeroAleatorio !== 0){
+                achou = false;
+                for(posicao = 0; posicao < segredos.length; posicao++){
+                    if(segredos[posicao] == numeroAleatorio){
+                        achou = true;
+                        break;
                 }
             }
-
+            }
+            
             if(achou == false){
                 segredos.push(numeroAleatorio);
                 numero++;
@@ -41,7 +42,7 @@
         }
         return segredos;
     }
-    var segredos = sorteiaNumeros(3);
+    var segredos = sorteiaNumeros(5);
     console.log(segredos);
 
     var input = document.querySelector("input");
