@@ -20,11 +20,16 @@
 
     //*****FUNÇÕES******************************************
     function verifica(){
+        var achou = false;
         for(var posicao = 0; posicao < segredos.length; posicao++){
             if(input.value == segredos[posicao]){
             alert("Voce ACERTOU");
+            achou = true; 
             break;
             }
+        }
+        if(achou == false){
+            alert("Você Errou");
         }
         input.value = "";
         input.focus();
