@@ -23,8 +23,20 @@
         var segredos = [];
         var numero = 1;
         while(numero <= quantidade){
-            segredos.push(sorteia());
-            numero++;
+            var numeroAleatorio = sorteia();
+            achou = false;
+
+            for(posicao = 0; posicao < segredos.length; posicao++){
+                if(segredos[posicao] == numeroAleatorio){
+                    achou = true;
+                    break;
+                }
+            }
+
+            if(achou == false){
+                segredos.push(numeroAleatorio);
+                numero++;
+            }
             
         }
         return segredos;
