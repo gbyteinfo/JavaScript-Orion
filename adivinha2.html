@@ -12,16 +12,25 @@
     <button>Clique para comparar o Numero</button>
 </body>
 <script>
+
+
+
+
     function sorteia(){
         return Math.round(Math.random() * 10);
     }
-    var segredos = [];
-    segredos.push(sorteia());
-    segredos.push(sorteia());
-    segredos.push(sorteia());
-    segredos.push(sorteia());
-    segredos.push(sorteia());
-    console.log(segredos)
+    function sorteiaNumeros(quantidade){
+        var segredos = [];
+        var numero = 1;
+        while(numero <= quantidade){
+            segredos.push(sorteia());
+            numero++;
+            
+        }
+        return segredos;
+    }
+    var segredos = sorteiaNumeros(3);
+    console.log(segredos);
 
     var input = document.querySelector("input");
     input.focus();
@@ -46,6 +55,5 @@
     
     var button = document.querySelector("button");
     button.onclick = verifica;
-
 </script>
 </html>
