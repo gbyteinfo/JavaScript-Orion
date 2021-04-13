@@ -12,13 +12,15 @@
     <button>Clique para comparar o Numero</button>
 </body>
 <script>
-
+    function sorteia(){
+        return Math.round(Math.random() * 10);
+    }
     var segredos = [];
-    segredos.push(Math.round(Math.random() * 10));
-    segredos.push(Math.round(Math.random() * 10));
-    segredos.push(Math.round(Math.random() * 10));
-    segredos.push(Math.round(Math.random() * 10));
-    segredos.push(Math.round(Math.random() * 10));
+    segredos.push(sorteia());
+    segredos.push(sorteia());
+    segredos.push(sorteia());
+    segredos.push(sorteia());
+    segredos.push(sorteia());
     console.log(segredos)
 
     var input = document.querySelector("input");
