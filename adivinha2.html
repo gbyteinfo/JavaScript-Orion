@@ -7,14 +7,15 @@
     <title>Adivinha 2 - JS</title>
 </head>
 <body>
-    <h1>Adivinha 2 em JS</h1>
+    <h1>Adivinha Numero - 1 a 10</h1>
     <input/>
-    <button>Clique para comparar o segredo</button>
+    <button>Clique para comparar o Numero</button>
 </body>
 <script>
     
     var segredo = Math.round(Math.random() * 10);
     var input = document.querySelector("input");
+    input.focus();
 
     //*****FUNÇÕES******************************************
     function verifica(){
