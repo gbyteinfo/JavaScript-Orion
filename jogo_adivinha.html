@@ -18,18 +18,20 @@
         pulaLinha()
     }
     //*****FUNÇÕES********************************************
-var numeroPensado = Math.round(Math.random() * 100);
-tentativas =1;
-while(tentativas <= 3){
+var numeroPensado = 4;
+var tentativasEscolhida = parseInt(prompt(`Digite o numero de Tentativas:`));
+var tentativas = 1;
+while(tentativas <= tentativasEscolhida){
     var chute = parseInt(prompt("Digite seu Chute..!"));
     if(chute == numeroPensado){
-        mostra(`Parabens voce acerto o numero, INCRIVEL boder. Numero Sorteado: ${numeroPensado}`)    
+        mostra(`Parabens voce acerto o numero, INCRIVEL broder. Numero Sorteado: ${numeroPensado}`) 
+        mostra(`<h3>Acertou na ${tentativas}° tentativa ..!</h3>`)       
+        tentativas = tentativasEscolhida;
     }else{
     mostra(`Poha mano, naõ foi dessa vez: Numero sorteado foi: <h3><b>TENTE DE NOVO</b></h3>`);
         }
     tentativas++;
     }
-
     mostra(`FIM`)
 </script>
 </html>
