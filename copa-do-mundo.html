@@ -19,12 +19,13 @@
     }
     //*****FUNÇÕES********************************************
 var anoCopa = 1930;
+var limite = prompt(`Qual o ano limite para calcular?`)
 
-while(anoCopa <=2021){
-    alert(`Teve Copa em ${anoCopa}`)
+while(anoCopa <= limite){
+    mostra(`Teve Copa em ${anoCopa}`)
     anoCopa = anoCopa + 4;
 }
-alert(`FIM`);
+mostra(`FIM`);
 
 
 
