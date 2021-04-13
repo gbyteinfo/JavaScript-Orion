@@ -22,11 +22,17 @@
     var totalFamiliares = parseInt(prompt(`Digite o Total de Qualtidade de familiares:`));
 
     var numero = 1;
+    var totalIdades = 0;
     while(numero <= totalFamiliares){
         var idade = parseInt(prompt(`Informe a idade do familiar`));
-        numero++;
+        totalIdades = totalIdades + idade;
+        numero++;1
         mostra(`${idade}`)
     }
+    var mediaIdades = totalIdades/totalFamiliares
+    
+    mostra(`Total de Idades é: ${totalIdades}`)
+    mostra(`Média de Idades é: ${mediaIdades}`)
     mostra(`FIM`)
 </script>
 </html>
