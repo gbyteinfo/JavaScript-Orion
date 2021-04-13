@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Idade Familiares - JS</title>
+</head>
+<body><h1>Media Idade Familiares - JS</h1></body>
+<script>
+    //*****FUNÇÕES******************************************
+    function pulaLinha(){
+        document.write("<br>")
+    }
+    function mostra(frase){
+       document.write(frase)
+        pulaLinha()
+        pulaLinha()
+    }
+    //*****FUNÇÕES********************************************
+
+    var idadeVilma = 33;
+    var idadeJulia = 17;
+    var idadeJorge = 12;
+    var idadeFernanda = 30;
+
+    var totalIdades = idadeFernanda + idadeJorge + idadeJulia + idadeVilma;
+    var mediaIdades = totalIdades / 4;
+
+    mostra(`Idades Totatis: ${totalIdades} e a média de Idade Familiar: ${mediaIdades}`);
+</script>
+</html>
