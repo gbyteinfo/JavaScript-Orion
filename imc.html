@@ -28,7 +28,7 @@
     var nome = prompt("Qual o seu Nome?");
     var peso = prompt(`${nome} qual seu PESO?`);
     var altura = prompt(`${nome} e sua ALTURA?`);
-    mostra(`O IMC de ${nome} é: ${calculaIMC(peso, altura)}`);    
+    mostra(`O IMC de ${nome} é: ${Math.round(calculaIMC(peso, altura))}`);    
     //*********** IMC USUARIO PROMPT *************************
 
     if(imc <= 18.5){
