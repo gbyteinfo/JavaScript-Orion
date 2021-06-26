@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <h1>Multiplicando Valores</h1>
+        <input placeholder="Valor Multiplicador" class="inputMultiplicando"/>
+        <input placeholder="Valor Multiplicado" class="inputMultiplicador" />
+        <button class="atualizarPagina">Multiplicar</button>
+    </main>    
+</body>
+<script>
+
+    const multiplicando = (multiplicando, multiplicado) => {
+            let resultado = multiplicando * multiplicado
+            alert(`${multiplicando} x ${multiplicado} = ${resultado}`)
+            return `${multiplicando} x ${multiplicado} = ${resultado}`
+    }
+    // ATUALIZANDO PAGINA
+    function atualizarPagina(){
+        location.reload();
+    }        
+    var buttonAtualizar = document.querySelector(".atualizarPagina");
+        buttonAtualizar.onclick = atualizarPagina;
+    
+    // VALOR INPUT 1
+    var input2 = document.querySelector(".inputMultiplicador")
+        input2.focus();
+        valorInput2 = input2.value;
+    
+    //VALOR INPUT 2
+    var input = document.querySelector(".inputMultiplicando");
+        input.focus();
+        valorInput = input.value;
+        valorFinal = multiplicando(valorInput, valorInput2)
+        //console.log(`Mutiplicação => ${valorFinal} \nMultiplicador => ${valorInput} | Multiplicado => ${valorInput2} | Produto => ${valorInput*valorInput2}`)
+</script>
+</html>
