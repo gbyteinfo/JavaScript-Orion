@@ -33,19 +33,26 @@
         valorInput2 = input2.value;
      
 
-        
+
     // OPERAÇÕES
     let valor1 = valorInput
     let valor2 = valorInput2
     let operacao = true
+
     //CONDIÇÃO NORMAL IF ELSE
     if(valor1==valor2){
         alert(`Numero igual`)
     }else{
         alert(`Numero Diferente`)
     }       
+    
     //OPERAÇÃO TERNARIA
-    valor1==valor2 ? alert(`Numero igual`) : alert(`Numero Diferente`)
+    valor1==valor2 ? 
+    (
+        alert(`Numero igual`)
+    ):(
+        alert(`Numero Diferente`)
+    )
 
 
 
