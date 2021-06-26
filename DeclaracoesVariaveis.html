@@ -15,7 +15,17 @@
     </main>    
 </body>
 <script>
+     //*****ESCOPO TIPO LET FLUXO SIMPLES*****/
+     let numLet = 2;
+      numLet = 10;
+      {
+        let numLet = 100;//
+        console.log(`numLet 2 escopo = ${numLet}`)
+      }
+      console.log(`numLet 1 escopo = ${numLet}`)
+    //****ESCOPO TIPO LET FLUXO SIMPLES******/
 
+    //CONSTANTE UMA VEZ RECEBIDO O VALOR ELA NÃO PODE SER ALTERADO
     const multiplicando = (multiplicando, multiplicado) => {
             let resultado = multiplicando * multiplicado
             alert(`${multiplicando} x ${multiplicado} = ${resultado}`)
@@ -38,6 +48,6 @@
         input.focus();
         valorInput = input.value;
         valorFinal = multiplicando(valorInput, valorInput2)
-        //console.log(`Mutiplicação => ${valorFinal} \nMultiplicador => ${valorInput} | Multiplicado => ${valorInput2} | Produto => ${valorInput*valorInput2}`)
+        console.log(`Mutiplicação => ${valorFinal} \nMultiplicador => ${valorInput} | Multiplicado => ${valorInput2} | Produto => ${valorInput*valorInput2}`)
 </script>
 </html>
