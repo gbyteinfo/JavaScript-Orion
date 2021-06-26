@@ -1,11 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="PT">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+        rel="stylesheet" 
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
+        crossorigin="anonymous">
 </head>
 <body style="background-color: #152238; color: #878683;">
     <main>
@@ -31,32 +34,25 @@
     var input2 = document.querySelector(".input2");
         input2.focus();
         valorInput2 = input2.value;
-     
-
+    
 
     // OPERAÇÕES
     let valor1 = valorInput
     let valor2 = valorInput2
-    let operacao = true
-
+    let comparacao = valor1==valor2
     //CONDIÇÃO NORMAL IF ELSE
-    if(valor1==valor2){
-        alert(`Numero igual`)
-    }else{
-        alert(`Numero Diferente`)
-    }       
-    
+        //if(valor1==valor2){
+        //    alert(`Numero igual`)
+        //}else{
+        //    alert(`Numero Diferente`)
+        //}       
+
     //OPERAÇÃO TERNARIA
-    valor1==valor2 ? 
-    (
-        alert(`Numero igual`)
-    ):(
-        alert(`Numero Diferente`)
-    )
-
-
-
-
+    const objeto = comparacao ? `Numeros iguais` : `Numeros Diferentes`
+    console.log(objeto) // RETORNO PELO OBJETO IDENTICO AO IF ELSE
+    console.log(comparacao && `Numeros IGUAIS`) // TRUE - RETORNA APENAS SE
+    console.log(!comparacao && `Numeros DIFERENTES`) // FALSE - RETORNA APENAS SENAO
+    console.log(comparacao) // RETORNO BOLEANO
 
 </script>
 </html>
