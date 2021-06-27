@@ -15,7 +15,7 @@
         <h1>For In For of</h1>
         <input type="number" class="input bg-dark" style="color: #878683; border-color: #878683;"/>
         <input type="number" class="input2 bg-dark" style="color: #878683; border-color: #878683;"/>
-        <button class="atualizarPagina btn-small btn-dark">Comparar Valor</button>
+        <button class="atualizarPagina btn-small btn-dark">Recarregar Página</button>
     </main>    
 </body>
 <script>
@@ -37,21 +37,20 @@
    
 
     //OPERAÇÕES 1
-    const operacoesDoisT2 = {nome: 'Jorge', sobrenome: 'Mira'}
-    const operacoesDoisT1 = {nome: 'Denise', sobrenome: 'Mira'}
+    const operacoesDoisT2 = [45,76,33,24,65,11,56]
     
-    const agrupandoSpread = {...operacoesDoisT2,...operacoesDoisT1}
-    
-    for(var mostra in agrupandoSpread){
-        console.log(agrupandoSpread[mostra])
+    for(var mostra in operacoesDoisT2){ //MOSTRA AS POSIÇÕES DO ARRAY EM ORDEM
+        console.log(mostra)
     }
-    //for(var mostra in operacoesDoisT1[1]){
-    //    console.log(`${mostra}`)
-    //}
-    //console.log(`\n`)
-    //for(var mostra in operacoesDoisT2){
-    //    console.log(`${mostra}`)
-    //}
+    console.log(`\n`)
+    for(var mostra of operacoesDoisT2){ // MOSTRA OS VALORES DE CADA POSIÇÃO
+        console.log(mostra)
+    }
+    console.log(`\n`)
+    for(var mostra in operacoesDoisT2){ // MOSTRA OS VALORES DE CADA POSIÇÃO
+        console.log(operacoesDoisT2[mostra])
+    }
+
 
     
 
