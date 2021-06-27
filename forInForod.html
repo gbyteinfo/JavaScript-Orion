@@ -37,28 +37,21 @@
    
 
     //OPERAÇÕES 1
-    const operacoesDoisT1 = [//ARRAY COM OBJETOS
-        {
-            input: '01',
-            valor: valorInput,
-            operacao: ['x','+']
-        },{
-            input: '02',
-            valor: valorInput2,
-            operacao: ['x','+']
-
-        }
-    ]
-    const operacoesDoisT2 = {nome: 'Jorge', sobrenome: 'Mira', filhos: ['Guilherme', 'Gabriel']}
-    const agrupandoSpread = [...operacoesDoisT1,{...operacoesDoisT2}]
+    const operacoesDoisT2 = {nome: 'Jorge', sobrenome: 'Mira'}
+    const operacoesDoisT1 = {nome: 'Denise', sobrenome: 'Mira'}
     
-    for(var mostra in operacoesDoisT1[1]){
-        console.log(`${mostra}`)
+    const agrupandoSpread = {...operacoesDoisT2,...operacoesDoisT1}
+    
+    for(var mostra in agrupandoSpread){
+        console.log(agrupandoSpread[mostra])
     }
-    console.log(`\n`)
-    for(var mostra in operacoesDoisT2){
-        console.log(`${mostra}`)
-    }
+    //for(var mostra in operacoesDoisT1[1]){
+    //    console.log(`${mostra}`)
+    //}
+    //console.log(`\n`)
+    //for(var mostra in operacoesDoisT2){
+    //    console.log(`${mostra}`)
+    //}
 
     
 
