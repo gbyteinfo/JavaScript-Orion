@@ -38,19 +38,27 @@
 
     //OPERAÇÕES 1
     
-    function soma(...num){
+    function soma(...num){ // PARAMETRO REST
         let res = 0
-        let numLength = num.length
-        for(let i = 0; i < numLength; i++){
-            res += num[i]
-        }
+        for(i of num){ // ENQUANTO i FOR POSIÇÃO num
+            res+=i
+            //res = res + i
+        } 
+        //let numLength = num.length
+        //for(let i = 0; i < numLength; i++){
+        //    res += num[i]
+        //}
         return res
     }
 
     console.log(`Soma dos inputs => ${soma(valorInput, valorInput2)}\n`)
     console.log(`Soma varios numeros => ${soma(21,22,55,44,22,33,66,88)}\n`)
-    console.log(`convertido => ${typeof valorInput}\n`)
-    console.log(`convertido => ${typeof t}\n`)
+
+    //TIPOS DE ELEMENTOS
+    console.log(`\nTipo 1 => ${typeof soma}\n`)
+    console.log(`Tipo 2 => ${typeof valorInput}\n`)
+    console.log(`Tipo 3 => ${typeof input}\n`)
+    console.log(`Tipo 4 => ${typeof input.value}\n`)
 
 </script>
 </html>
