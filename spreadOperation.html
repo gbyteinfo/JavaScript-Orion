@@ -13,8 +13,8 @@
 <body style="background-color: #152238; color: #878683;">
     <main>
         <h1>Spread Operations</h1>
-        <input class="input bg-dark" style="color: #878683; border-color: #878683;"/>
-        <input class="input2 bg-dark" style="color: #878683; border-color: #878683;"/>
+        <input type="number" class="input bg-dark" style="color: #878683; border-color: #878683;"/>
+        <input type="number" class="input2 bg-dark" style="color: #878683; border-color: #878683;"/>
         <button class="atualizarPagina btn-small btn-dark">Comparar Valor</button>
     </main>    
 </body>
@@ -34,13 +34,42 @@
     var input2 = document.querySelector(".input2");
         input2.focus();
         valorInput2 = input2.value;
+   
+
+    //OPERAÇÕES 1
+    const operacoesUm = [valorInput, valorInput2]
+    function soma(valorInput,valorInput2){
+        return valorInput*valorInput2+1000
+    }
+    console.log(`Operação 1 => ${valorInput} x ${valorInput2} + 1000 = ${soma(operacoesUm[0], operacoesUm[1])}`)
+    //alert(`Operação 1 => ${valorInput} x ${valorInput2} + 1000 = ${soma(operacoesUm[0], operacoesUm[1])}`)
+
+    //OPERAÇÕES 2
+    const operacoesDoisT1 = [//ARRAY COM OBJETOS
+        {
+            input: '01',
+            valor: valorInput,
+            operacao: ['x','+']
+        },{
+            input: '02',
+            valor: valorInput2,
+            operacao: ['x','+']
+
+        }
+    ]
+    const operacoesDoisT2 = {nome: 'Jorge', sobrenome: 'Mira', filhos: ['Guilherme', 'Gabriel']}//ARRAY DE OBJETOS
+    const agrupandoSpread = [...operacoesDoisT1,{...operacoesDoisT2}]
+    console.log(agrupandoSpread)//COPIA DOS ELEMENTOS
+
+    
+    const p1 = [...operacoesDoisT1] //TRATANDO UM ARRAY
+    const p2 = {...operacoesDoisT2} //TRATANDO UM OBJETO
+    console.log(p1)
+    console.log(p2)
+
+    
 
 
-    //OPERAÇÕES 
-    const notas=[10,50,30,75,68,23,3]
-    console.log(notas)
-    console.log(...notas)
-    //console.log(notas[3])
 
 
 </script>
