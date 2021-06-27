@@ -37,8 +37,15 @@
    
 
     //OPERAÇÕES 1
-    const operacoesDoisT2 = [45,76,33,24,65,11,56]
-    
+    let operacoesDoisT2 = [valorInput,valorInput2,20,30]
+    let maior10 = 0
+    let menor10 = 0
+    for(var mostra of operacoesDoisT2){ //MOSTRA AS POSIÇÕES DO ARRAY EM ORDEM
+        mostra > 10 ? maior10++ : menor10++
+    }
+    console.log(`Numeros Maior que 10 => ${maior10}`)
+    console.log(`Numeros Maior que 10 => ${menor10}`)
+
     for(var mostra in operacoesDoisT2){ //MOSTRA AS POSIÇÕES DO ARRAY EM ORDEM
         console.log(mostra)
     }
@@ -51,6 +58,7 @@
         console.log(operacoesDoisT2[mostra])
     }
 
+    
 
     
 
